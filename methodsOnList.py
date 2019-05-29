@@ -17,3 +17,10 @@ print(name)
 
 name.remove('patrick')
 print(name)
+
+#sorting method
+integer=[4,-1,19,2,0,8,1]
+integer.sort()
+print(integer)
+integer.sort(reverse=True)
+print(integer)  #sorting in reverse order

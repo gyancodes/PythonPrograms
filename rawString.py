@@ -1,6 +1,6 @@
 print(r'That is carol\n ')      #prints the string as it is
 
-#multiline string with tripple qoutes
+#multiline string with tripple(single or double) qoutes
 print(''' Dear Alice,
 Eve's cat has been arrested for catnapping,cat burglary,and extortion.
 Sincerely,

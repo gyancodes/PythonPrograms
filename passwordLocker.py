@@ -9,9 +9,11 @@
 @pause
 """
 
-#for executing it
-#press windows+r then type passwordLocker <name whose password you need>
-#e.g.  type "passwordLocker email"  without quotation mark
+'''for executing it
+press windows+r then type passwordLocker <name whose password you need>
+e.g.  type "passwordLocker email"  without quotation mark'''
+
+
 PASSWORDS={'email':'dajbdjbwb',
            'facebook':'svcajvjbk',
            'instagram':'cbjkasbci'}

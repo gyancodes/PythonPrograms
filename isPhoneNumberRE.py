@@ -35,4 +35,7 @@ plus=re.compile(r'Bat(wo)+man')
 pl=plus.search('The adventures of Batwowoman')
 print(pl.group())
 
-
+print('--matching specific repetition with curly bracket--')
+repet=re.compile(r'(Ha){3}')
+robj=repet.search('HaHaHaHa')
+print(robj.group())

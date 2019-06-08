@@ -39,3 +39,15 @@ print('--matching specific repetition with curly bracket--')
 repet=re.compile(r'(Ha){3}')
 robj=repet.search('HaHaHaHa')
 print(robj.group())
+
+
+print('--Greedy and Nongreedy matching--')
+print('--Greedy--it matches the longest one')
+greedy=re.compile(r'(Ha){3,4}') #it matches the longest one i.e. 4
+grob=greedy.search('Dont do HaHaHaHaHa')
+print(grob.group())
+
+print('--NonGreedy--it matches the shortest one')
+nongreedy=re.compile(r'(Ha){2,5}?')   #it is followed by question mark
+ngd=nongreedy.search('Dont do HaHaHaHaHa')
+print(ngd.group())

@@ -16,21 +16,23 @@ batregex=re.compile(r'Bat(man|mobile|copter)')  #re for batman,batmobile,batcopt
 mobj=batregex.search('Batmobile lost a wheel')
 print(mobj.group())
 
-print('optional matching wit question mark')
+print('--optional matching wit question mark--')
 optional=re.compile(r'Bat(wo)?man')
 vs=optional.search('The adventures of Batman')
 print(vs.group())
 vd=optional.search('The adventures of Batwoman')
 print(vd.group())
 
-print('matching zero or more with the star')
+print('--matching zero or more with the star--')
 opt=re.compile(r'Bat(wo)*man')
 vde=opt.search('The adventures of Batman')
 print(vde.group())
 vdw=opt.search('The adventures of Batwowowowoman')
 print(vdw.group())
 
-print('matching 1 or more with the plus')
+print('--matching 1 or more with the plus--')
 plus=re.compile(r'Bat(wo)+man')
 pl=plus.search('The adventures of Batwowoman')
 print(pl.group())
+
+

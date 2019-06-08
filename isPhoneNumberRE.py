@@ -22,3 +22,8 @@ vs=optional.search('The adventures of Batman')
 print(vs.group())
 vd=optional.search('The adventures of Batwoman')
 print(vd.group())
+
+'''matching zero or more with the star'''
+opt=re.compile(r'Bat(wo)*man')
+vdw=opt.search('The adventures of Batwowowowoman')
+print(vdw.group())

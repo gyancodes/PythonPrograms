@@ -16,5 +16,14 @@ def isPhoneNumber(text):
             return False
     return True
 
-
+print('222-325-2541  :is this a phone number')
 print(isPhoneNumber('222-325-2541'))
+print('mos-mos-mosi  :is this a phone number')
+print(isPhoneNumber('mos-mos-mosi'))
+
+message='Call me at 415-555-6541 tommorow. 415-541-6656 is my office'
+for i in range(0,len(message)):
+    check=message[i:i+12]
+    if isPhoneNumber(check):
+        print('phone number found  :'+check)
+print('over,Done')

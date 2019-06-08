@@ -6,4 +6,8 @@ print('Phone number found: '+mobject.group())     #group(0 gives the matched str
 
 phnregex=re.compile(r'(\d\d\d)-(\d\d\d-\d\d\d\d)')  #first parenthesis is for first group(1) and second parnhesis for second
 mob=phnregex.search('My number is 415-654-9874')
-print('Area :'+mob.group(1)+'\t Phone number :'+mob.group(2))
+print('Area :'+mob.group(1)+'\t Main Phone number :'+mob.group(2))
+
+'''since mob.group returns tuple we can use as'''
+a,b=mob.groups()
+print(a,b)

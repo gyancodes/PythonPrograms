@@ -1,7 +1,7 @@
 import re
-phoneNumberRegex=re.compile(r'\d\d\d-\d\d\d-\d\d\d\d')  #regular expression compiles
+phoneNumberRegex=re.compile(r'\d\d\d-\d\d\d-\d\d\d\d')          #regular expression compiles
 mobject=phoneNumberRegex.search('My number is 415-654-9874')    #search() searches for the given re in the entire string
-print('Phone number found: '+mobject.group())     #group(0 gives the matched string
+print('Phone number found: '+mobject.group())                   #group(0 gives the matched string
 
 
 phnregex=re.compile(r'(\d\d\d)-(\d\d\d-\d\d\d\d)')  #first parenthesis is for first group(1) and second parnhesis for second
@@ -12,7 +12,7 @@ print('Area :'+mob.group(1)+'\t Main Phone number :'+mob.group(2))
 a,b=mob.groups()
 print(a,b)
 
-batregex=re.compile(r'Bat(man|mobile|copter)')  #re for batman,batmobile,batcopter(several alternative patterns)
+batregex=re.compile(r'Bat(man|mobile|copter)')               #re for batman,batmobile,batcopter(several alternative patterns)
 mobj=batregex.search('Batmobile lost a wheel')
 print(mobj.group())
 
@@ -43,11 +43,16 @@ print(robj.group())
 
 print('--Greedy and Nongreedy matching--')
 print('--Greedy--it matches the longest one')
-greedy=re.compile(r'(Ha){3,4}') #it matches the longest one i.e. 4
+greedy=re.compile(r'(Ha){3,4}')                              #it matches the longest one i.e. 4
 grob=greedy.search('Dont do HaHaHaHaHa')
 print(grob.group())
 
 print('--NonGreedy--it matches the shortest one')
-nongreedy=re.compile(r'(Ha){2,5}?')   #it is followed by question mark
+nongreedy=re.compile(r'(Ha){2,5}?')                          #it is followed by question mark
 ngd=nongreedy.search('Dont do HaHaHaHaHa')
 print(ngd.group())
+
+print('---findall() method---') #it returns all the matched string while search() method returns only the first match in whole string
+phn=re.compile(r'\d\d\d-\d\d\d-\d\d\d\d')
+print(phn.findall('Cell: 415-541-4562 work: 789-954-6547'))  #it does not return object
+

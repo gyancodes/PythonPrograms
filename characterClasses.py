@@ -31,3 +31,7 @@ print(endswith.findall('I love you 3000'))
 print('-begins with digit and ends with digit-')
 beginswithandendswith=re.compile(r'^\d+$')                  #plus is for one or more
 print(beginswithandendswith.findall('13148941168443'))
+
+print('---using wildcard character (.)---')
+wildcard=re.compile(r'.at')                             #matches any character except new line
+print(wildcard.findall('The cat in the hat sat on the flat mat'))
